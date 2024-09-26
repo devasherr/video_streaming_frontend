@@ -90,7 +90,7 @@ const Menu = ({ darkMode, setDarkMode }) => {
   const handleLogOut = () => {
     localStorage.clear();
     axios.post(
-      "http://localhost:8800/api/auth/signout",
+      "https://video-streaming-backend-8lgu.onrender.com/api/auth/signout",
       {},
       {
         withCredentials: true,

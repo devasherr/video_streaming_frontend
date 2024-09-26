@@ -83,7 +83,7 @@ const SignIn = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8800/api/auth/signin",
+        "https://video-streaming-backend-8lgu.onrender.com/api/auth/signin",
         {
           name,
           password,
@@ -106,7 +106,7 @@ const SignIn = () => {
       .then((res) => {
         axios
           .post(
-            "http://localhost:8800/api/auth/google",
+            "https://video-streaming-backend-8lgu.onrender.com/api/auth/google",
             {
               name: res.user.displayName,
               email: res.user.email,

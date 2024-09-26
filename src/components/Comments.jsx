@@ -37,7 +37,7 @@ const Comments = ({ videoId }) => {
     const fetchComments = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8800/api/comments/${videoId}`,
+          `https://video-streaming-backend-8lgu.onrender.com/api/comments/${videoId}`,
           { withCredentials: true }
         );
         setComments(res.data);

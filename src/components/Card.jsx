@@ -78,7 +78,7 @@ const Card = ({ type, video }) => {
   useEffect(() => {
     const fetchChannels = async () => {
       const res = await axios.get(
-        `http://localhost:8800/api/users/find/${video.userId}`
+        `https://video-streaming-backend-8lgu.onrender.com/api/users/find/${video.userId}`
       );
       setChannel(res.data);
     };

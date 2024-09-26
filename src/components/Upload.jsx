@@ -137,7 +137,7 @@ const Upload = ({ setOpen }) => {
   const handleUpload = async (e) => {
     e.preventDefault();
     const res = await axios.post(
-      "http://localhost:8800/api/videos",
+      "https://video-streaming-backend-8lgu.onrender.com/api/videos",
       {
         ...inputs,
         tags,

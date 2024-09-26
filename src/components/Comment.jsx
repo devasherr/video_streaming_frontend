@@ -43,7 +43,7 @@ const Comment = ({ comment }) => {
   useEffect(() => {
     const fetchComment = async () => {
       const res = await axios.get(
-        `http://localhost:8800/api/users/find/${comment.userId}`,
+        `https://video-streaming-backend-8lgu.onrender.com/api/users/find/${comment.userId}`,
         { withCredentials: true }
       );
       setChannel(res.data);

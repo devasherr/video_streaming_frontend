@@ -128,10 +128,10 @@ const Video = () => {
     const fetchData = async () => {
       try {
         const videoRes = await axios.get(
-          `http://localhost:8800/api/videos/find/${path}`
+          `https://video-streaming-backend-8lgu.onrender.com/api/videos/find/${path}`
         );
         const channelRes = await axios.get(
-          `http://localhost:8800/api/users/find/${videoRes.data.userId}`
+          `https://video-streaming-backend-8lgu.onrender.com/api/users/find/${videoRes.data.userId}`
         );
         setChannel(channelRes.data);
         dispatch(fetchSuccess(videoRes.data));
@@ -142,7 +142,7 @@ const Video = () => {
 
   const handleLike = async () => {
     await axios.put(
-      `http://localhost:8800/api/users/like/${currentVideo._id}`,
+      `https://video-streaming-backend-8lgu.onrender.com/api/users/like/${currentVideo._id}`,
       {},
       { withCredentials: true }
     );
@@ -151,7 +151,7 @@ const Video = () => {
 
   const handleDislike = async () => {
     await axios.put(
-      `http://localhost:8800/api/users/dislike/${currentVideo._id}`,
+      `https://video-streaming-backend-8lgu.onrender.com/api/users/dislike/${currentVideo._id}`,
       {},
       {
         withCredentials: true,
@@ -163,12 +163,12 @@ const Video = () => {
   const handleSub = async () => {
     currentUser.subscribedUsers.includes(channel._id)
       ? await axios.put(
-          `http://localhost:8800/api/users/unsub/${channel._id}`,
+          `https://video-streaming-backend-8lgu.onrender.com/api/users/unsub/${channel._id}`,
           {},
           { withCredentials: true }
         )
       : await axios.put(
-          `http://localhost:8800/api/users/sub/${channel._id}`,
+          `https://video-streaming-backend-8lgu.onrender.com/api/users/sub/${channel._id}`,
           {},
           { withCredentials: true }
         );

@@ -17,7 +17,7 @@ const Search = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       const res = await axios.get(
-        `http://localhost:8800/api/videos/search${query}`
+        `https://video-streaming-backend-8lgu.onrender.com/api/videos/search${query}`
       );
       setVideos(res.data);
     };
